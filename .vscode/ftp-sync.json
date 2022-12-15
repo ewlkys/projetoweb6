@@ -1,9 +1,9 @@
 {
-    "remotePath": "/htdocs/projeto-web/",
+    "remotePath": "/htdocs/projetoweb_6-2/",
     "host": "ftpupload.net",
     "username": "xxxxxx",
     "password": "xxxxx",
-    "port": 21,
+    "port": 80,
     "secure": false,
     "protocol": "ftp",
     "uploadOnSave": false,
