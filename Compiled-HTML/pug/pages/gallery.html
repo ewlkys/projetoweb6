@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="/assets/javascript/scriptNav.js" defer=""></script>
+    <script src="/assets/javascript/scriptGallery.js" defer=""></script>
+    <link rel="stylesheet" href="/assets/css/styleGalleryPage.css">
+</head>
+<h1>GALLERY </h1>
+<link rel="stylesheet" href="/assets/css/styleheader.css">
+<header>
+    <div class="headersemlinha"><a class="logo" href="#"><img src="/assets/images/logotipocastanho.png"
+                alt="logoticastanho"></a>
+        <div class="group">
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Events </a></li>
+                <li><a class="active" href="#">Menus</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+            <div class="search"><span class="icon"><img class="searchBtn" src="/assets/images/lupacastanha.png"
+                        alt="luparosa"><img class="closeBtn" src="/assets/images/closerosa.png" alt="closerosa"></span>
+            </div><img class="menuToggle" src="/assets/images/menumobilecastanho.png" alt="menumobilerosa">
+        </div><img class="line" src="/assets/images/linecastanho.png" alt="linerosa2">
+        <div class="searchBox"><input style="color: #FFD7CC;" type="text" placeholder="Search here..."></div>
+    </div>
+</header>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+    let searchBtn = document.querySelector('.searchBtn');
+    let closeBtn = document.querySelector('.closeBtn');
+    let searchBox = document.querySelector('.searchBox');
+    let navigation = document.querySelector('.navigation');
+    let menuToggle = document.querySelector('.menuToggle');
+    let header = document.querySelector('header');
+    searchBtn.onclick = function () {
+        searchBox.classList.add('active');
+        closeBtn.classList.add('active');
+        searchBtn.classList.add('active');
+        menuToggle.classList.add('hide');
+        header.classList.remove('open');
+    }
+    closeBtn.onclick = function () {
+        searchBox.classList.remove('active');
+        closeBtn.classList.remove('active');
+        searchBtn.classList.remove('active');
+        menuToggle.classList.remove('hide');
+    }
+    menuToggle.onclick = function () {
+        header.classList.toggle('open');
+        searchBox.classList.remove('active');
+        closeBtn.classList.remove('active');
+        searchBtn.classList.remove('active');
+    }
+</script>
+<div class="container">
+    <div class="wrapper">
+        <div class="icon"><i class="fa-solid fa-angle-left" id="left"></i></div>
+        <ul class="tabs-box">
+            <li class="tab active" data-filter="all">ALL PHOTOS</li>
+            <li class="tab" data-filter="spaces">SPACES</li>
+            <li class="tab" data-filter="weddings">WEDDINGS</li>
+            <li class="tab" data-filter="baptisms">BAPTISMS</li>
+            <li class="tab" data-filter="themeParties">THEME PARTIES</li>
+            <li class="tab" data-filter="banquets">BANQUETS</li>
+            <li class="tab" data-filter="congresses">CONGRESSES</li>
+        </ul>
+        <div class="icon"><i class="fa-solid fa-angle-right" id="right"></i></div>
+    </div>
+</div>
+<div class="image-container"> <a class="image weddings" href="/assets/images/weddings/photoWeddings4.jpg"><img
+            src="/assets/images/weddings/photoWeddings4.jpg" alt="Wedding decoration"></a><a class="image weddings"
+        href="/assets/images/weddings/photoWeddings2.jpg"><img src="/assets/images/weddings/photoWeddings2.jpg"
+            alt="Wedding garden"></a><a class="image banquets" href="/assets/images/banquets/photoBanquets1.jpg"><img
+            src="/assets/images/banquets/photoBanquets1.jpg" alt="fruit"></a><a class="image banquets"
+        href="/assets/images/banquets/photoBanquets3.jpg"><img src="/assets/images/banquets/photoBanquets3.jpg"
+            alt="banquets decoration"></a><a class="image spaces" href="/assets/images/spaces/photoSpaces6.jpg"><img
+            src="/assets/images/spaces/photoSpaces6.jpg" alt="Pool day"></a><a class="image spaces"
+        href="/assets/images/spaces/photoSpaces7.jpg"><img src="/assets/images/spaces/photoSpaces7.jpg"
+            alt="Pool day"></a><a class="image themeParties"
+        href="/assets/images/themeParties/photoThemeParties2.jpg"><img
+            src="/assets/images/themeParties/photoThemeParties2.jpg" alt="Inflatable"></a><a class="image spaces"
+        href="/assets/images/spaces/photoSpaces9.jpg"><img src="/assets/images/spaces/photoSpaces9.jpg"
+            alt="Fireworks night"></a><a class="image baptisms" href="/assets/images/baptisms/photoBaptisms4.jpg"><img
+            src="/assets/images/baptisms/photoBaptisms4.jpg" alt="Baptisms decoration blue"></a><a
+        class="image weddings" href="/assets/images/weddings/photoWeddings1.jpg"><img
+            src="/assets/images/weddings/photoWeddings1.jpg" alt="Wedding pool"></a><a class="image spaces"
+        href="/assets/images/spaces/photoSpaces2.jpg"><img src="/assets/images/spaces/photoSpaces2.jpg"
+            alt="Pool night"></a><a class="image weddings" href="/assets/images//weddings/photoWeddings3.jpg"><img
+            src="/assets/images/weddings/photoWeddings3.jpg" alt="Wedding pool night"></a><a class="image weddings"
+        href="/assets/images/weddings/photoWeddings5.jpg"><img src="/assets/images/weddings/photoWeddings5.jpg"
+            alt="Wedding cake decoration"></a><a class="image weddings"
+        href="/assets/images/weddings/photoWeddings6.jpg"><img src="/assets/images/weddings/photoWeddings6.jpg"
+            alt="Wedding photographer"></a><a class="image weddings"
+        href="/assets/images/weddings/photoWeddings7.jpg"><img src="/assets/images/weddings/photoWeddings7.jpg"
+            alt="Wedding entry"></a><a class="image weddings" href="/assets/images/weddings/photoWeddings8.jpg"><img
+            src="/assets/images/weddings/photoWeddings8.jpg" alt="Wedding cake night"></a><a class="image baptisms"
+        href="/assets/images/baptisms/photoBaptisms1.jpg"><img src="/assets/images/baptisms/photoBaptisms1.jpg"
+            alt="Baptisms gifts"></a><a class="image baptisms" href="/assets/images/baptisms/photoBaptisms2.jpg"><img
+            src="/assets/images/baptisms/photoBaptisms2.jpg" alt="Baptisms decoration pink"></a><a
+        class="image baptisms" href="/assets/images/baptisms/photoBaptisms3.jpg"><img
+            src="/assets/images/baptisms/photoBaptisms3.jpg" alt="Baptisms decoration pink"></a><a class="image spaces"
+        href="/assets/images/spaces/photoSpaces3.jpg"><img src="/assets/images/spaces/photoSpaces3.jpg"
+            alt="Pool night"></a><a class="image baptisms" href="/assets/images/baptisms/photoBaptisms5.jpg"><img
+            src="/assets/images/baptisms/photoBaptisms5.jpg" alt="Baptisms decoration blue"></a><a
+        class="image themeParties" href="/assets/images/themeParties/photoThemeParties1.jpg"><img
+            src="/assets/images/themeParties/photoThemeParties1.jpg" alt="Dance girls"></a><a class="image spaces"
+        href="/assets/images/spaces/photoSpaces8.jpg"><img src="/assets/images/spaces/photoSpaces8.jpg"
+            alt="Pool noon"></a><a class="image themeParties"
+        href="/assets/images/themeParties/photoThemeParties3.jpg"><img
+            src="/assets/images/themeParties/photoThemeParties3.jpg" alt="Dance girl"></a><a class="image banquets"
+        href="/assets/images/banquets/photoBanquets2.jpg"><img src="/assets/images/banquets/photoBanquets2.jpg"
+            alt="table with food"></a><a class="image themeParties"
+        href="/assets/images/banquets/photoBanquets4.jpg"><img src="/assets/images/banquets/photoBanquets4.jpg"
+            alt="fruit"></a><a class="image spaces" href="/assets/images/spaces/photoSpaces1.jpg"><img
+            src="/assets/images/spaces/photoSpaces1.jpg" alt="Pool night"></a><a class="image banquets"
+        href="/assets/images/banquets/photoBanquets5.jpg"><img src="/assets/images/banquets/photoBanquets5.jpg"
+            alt="banquets decoration"></a><a class="image banquets"
+        href="/assets/images/banquets/photoBanquets6.jpg"><img src="/assets/images/banquets/photoBanquets6.jpg"
+            alt="banquets decoration"></a><a class="image banquets"
+        href="/assets/images/banquets/photoBanquets7.jpg"><img src="/assets/images/banquets/photoBanquets7.jpg"
+            alt="banquets decoration"></a><a class="image congresses"
+        href="/assets/images/congresses/photoCongresses1.jpg"><img src="/assets/images/congresses/photoCongresses1.jpg"
+            alt="congresses decoration"></a><a class="image congresses"
+        href="/assets/images/congresses/photoCongresses2.jpg"><img src="/assets/images/congresses/photoCongresses2.jpg"
+            alt="congresses decoration"></a><a class="image spaces" href="/assets/images/spaces/photoSpaces5.jpg"><img
+            src="/assets/images/spaces/photoSpaces5.jpg" alt="Pool day"></a><a class="image congresses"
+        href="/assets/images/congresses/photoCongresses3.jpg"><img src="/assets/images/congresses/photoCongresses3.jpg"
+            alt="congresses decoration"></a><a class="image congresses"
+        href="/assets/images/congresses/photoCongresses4.jpg"><img src="/assets/images/congresses/photoCongresses4.jpg"
+            alt="congresses decoration"></a><a class="image spaces" href="/assets/images/spaces/photoSpaces4.jpg"><img
+            src="/assets/images/spaces/photoSpaces4.jpg" alt="Table decoration"></a><a class="image congresses"
+        href="/assets/images/congresses/photoCongresses5.jpg"><img src="/assets/images/congresses/photoCongresses5.jpg"
+            alt="congresses decoration"></a></div>

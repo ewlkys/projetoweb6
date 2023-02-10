@@ -1,0 +1,136 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Menus
+  link(rel='stylesheet' href='/assets/css/stylecongressos.css')
+header
+  .headersemlinha
+    a.logo(href='#')
+      img(src='/assets/images/imagensCongressos/logotiporosa.png' alt='logotiporosa')
+    .group
+      ul.navigation
+        li
+          a(href='#') Home
+        li
+          a.active(href='#') Events
+        li
+          a(href='header.html') Menus
+        li
+          a(href='#') Gallery
+        li
+          a(href='#') Contacts
+      .search
+        span.icon
+          img.searchBtn(src='/assets/images/imagensCongressos/luparosa.png' alt='luparosa')
+          img.closeBtn(src='/assets/images/imagensCongressos/closerosa.png' alt='closerosa')
+      img.menuToggle(src='/assets/images/imagensCongressos/menumobilerosa.png' alt='menumobilerosa')
+    img.line(src='/assets/images/imagensCongressos/linharosa2.png' alt='linerosa2')
+    .searchBox
+      input(style='color: #FFD7CC;' type='text' placeholder='Search here...')
+section.intro
+  .vitralconjunto
+    img.vitral(src='/assets/images/imagensCongressos/vitralcongressos.png' alt='vitralcongressos')
+    .textovitral
+      h1 Congresses
+      h4 Companies have been trusting us their events
+      h4 Collaborate with us and join our costumers satisfaction.
+      img(src='/assets/images/imagensCongressos/linhacongressos.png' alt='linhacongressos')
+  img.elementovitral(src='/assets/images/imagensCongressos/elementocongressos.png' alt='elementocongressos')
+section.testemunhos
+  .book
+    input#c1(type='checkbox')
+    input#c2(type='checkbox')
+    input#c3(type='checkbox')
+    #cover
+      img.imglivro(src='/assets/images/imagensCongressos/1.png')
+    .flip-book
+      #p1.flip
+        .back
+          img.imglivro(src='/assets/images/imagensCongressos/1.png' alt='')
+          label.back-btn(for='c1') Back
+        .front
+          img.imglivro(src='/assets/images/imagensCongressos/2.png' alt='')
+          label.next-btn(for='c1') Next
+      #p2.flip
+        .back
+          img.imglivro(src='/assets/images/imagensCongressos/3.png' alt='')
+          label.back-btn(for='c2') Back
+        .front
+          h2 strawberry
+          p
+            | Lorem ipsum dolor sit amet
+            | consectetur adipisicing elit.
+            | Soluta impedit eius placeat
+            | perspiciatis odit temporibus.
+            | A deserunt natus soluta maxime?
+            | Reiciendis eaque explicabo
+            | sapiente quae dolor numquam
+            | enim, iusto voluptatum?
+          label.next-btn(for='c2') Next
+      #p3.flip
+        .back
+          img.imglivro(src='/assets/images/imagensCongressos/3.png' alt='')
+          label.back-btn(for='c3')
+        .front
+          h2 pineapple
+          p
+            | Lorem ipsum dolor sit amet
+            | consectetur adipisicing elit.
+            | Soluta impedit eius placeat
+            | perspiciatis odit temporibus.
+            | A deserunt natus soluta maxime?
+            | Reiciendis eaque explicabo
+            | sapiente quae dolor numquam
+            | enim, iusto voluptatum?
+          label.next-btn(for='c3') Next
+section.menus
+  .content
+    .contentleft
+      h4
+        | Statistics confirmed that even at worktime 
+        br
+        |  you cannot refuse one of our meals...
+      img.grafico(src='/assets/images/imagensCongressos/grafico.png' alt='')
+      .relativomenu
+        h4
+          | Hard work must be rewarded 
+          br
+          |  with excellent food!
+        a.botaomenus(href='#') Menus
+    img.malaprato(src='/assets/images/imagensCongressos/malaprato.png' alt='')
+section.galeria
+  h4
+    | Check our gallery to see more 
+    br
+    |  moments captured like this one!
+  a.botaogaleria(href='#') Gallery
+script(type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js')
+script(nomodule='' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js')
+script.
+  let searchBtn = document.querySelector('.searchBtn');
+  let closeBtn = document.querySelector('.closeBtn');
+  let searchBox =document.querySelector('.searchBox');
+  let navigation = document.querySelector('.navigation');
+  let menuToggle = document.querySelector('.menuToggle');
+  let header = document.querySelector('header');
+  searchBtn.onclick = function(){
+  searchBox.classList.add('active');
+  closeBtn.classList.add('active');
+  searchBtn.classList.add('active');
+  menuToggle.classList.add('hide');
+  header.classList.remove('open');
+  }
+  closeBtn.onclick = function(){
+  searchBox.classList.remove('active');
+  closeBtn.classList.remove('active');
+  searchBtn.classList.remove('active');
+  menuToggle.classList.remove('hide');
+  }
+  menuToggle.onclick = function(){
+  header.classList.toggle('open');
+  searchBox.classList.remove('active');
+  closeBtn.classList.remove('active');
+  searchBtn.classList.remove('active');
+  }

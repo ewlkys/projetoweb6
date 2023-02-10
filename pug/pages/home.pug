@@ -1,0 +1,35 @@
+- var directory="./"
+
+block variables
+  - var title="HOME"
+
+
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title HOME
+  link(rel='stylesheet' href='/assets/css/style.css')
+  link(rel='stylesheet' href='/assets/css/styleGallery.css')
+
+include ../organisms/navBar
+
+section#home.home
+  .swiper-wrapper
+    .swiper-slide
+      .box.second(style='background: url(/assets/images/homepagetudo.png) no-repeat;')
+        include ../atoms/contentHome
+          
+section#about.about
+  include ../atoms/contentAboutUs
+
+section
+  main.container 
+    section.gallery
+      include ../atoms/img1HomeQuinta
+      include ../atoms/img2HomeQuinta
+      include ../atoms/img3HomeQuinta
+      include ../atoms/img4HomeQuinta
+
+include ../organisms/footer

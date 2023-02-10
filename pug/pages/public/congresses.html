@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menus</title>
+  <link rel="stylesheet" href="/assets/css/stylecongressos.css">
+</head>
+<header>
+  <div class="headersemlinha"><a class="logo" href="#"><img src="/assets/images/imagensCongressos/logotiporosa.png" alt="logotiporosa"></a>
+    <div class="group">
+      <ul class="navigation">
+        <li><a href="#">Home</a></li>
+        <li><a class="active" href="#">Events</a></li>
+        <li><a href="header.html">Menus</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contacts</a></li>
+      </ul>
+      <div class="search"><span class="icon"><img class="searchBtn" src="/assets/images/imagensCongressos/luparosa.png" alt="luparosa"><img class="closeBtn" src="/assets/images/imagensCongressos/closerosa.png" alt="closerosa"></span></div><img class="menuToggle" src="/assets/images/imagensCongressos/menumobilerosa.png" alt="menumobilerosa">
+    </div><img class="line" src="/assets/images/imagensCongressos/linharosa2.png" alt="linerosa2">
+    <div class="searchBox">
+      <input style="color: #FFD7CC;" type="text" placeholder="Search here...">
+    </div>
+  </div>
+</header>
+<section class="intro">
+  <div class="vitralconjunto"><img class="vitral" src="/assets/images/imagensCongressos/vitralcongressos.png" alt="vitralcongressos">
+    <div class="textovitral">
+      <h1>Congresses</h1>
+      <h4>Companies have been trusting us their events</h4>
+      <h4>Collaborate with us and join our costumers satisfaction.</h4><img src="/assets/images/imagensCongressos/linhacongressos.png" alt="linhacongressos">
+    </div>
+  </div><img class="elementovitral" src="/assets/images/imagensCongressos/elementocongressos.png" alt="elementocongressos">
+</section>
+<section class="testemunhos">
+  <div class="book">
+    <input id="c1" type="checkbox">
+    <input id="c2" type="checkbox">
+    <input id="c3" type="checkbox">
+    <div id="cover"><img class="imglivro" src="/assets/images/imagensCongressos/1.png"></div>
+    <div class="flip-book">
+      <div class="flip" id="p1">
+        <div class="back"><img class="imglivro" src="/assets/images/imagensCongressos/1.png" alt="">
+          <label class="back-btn" for="c1">Back</label>
+        </div>
+        <div class="front"><img class="imglivro" src="/assets/images/imagensCongressos/2.png" alt="">
+          <label class="next-btn" for="c1">Next</label>
+        </div>
+      </div>
+      <div class="flip" id="p2">
+        <div class="back"><img class="imglivro" src="/assets/images/imagensCongressos/3.png" alt="">
+          <label class="back-btn" for="c2">Back</label>
+        </div>
+        <div class="front">
+          <h2>strawberry</h2>
+          <p>
+            Lorem ipsum dolor sit amet
+            consectetur adipisicing elit.
+            Soluta impedit eius placeat
+            perspiciatis odit temporibus.
+            A deserunt natus soluta maxime?
+            Reiciendis eaque explicabo
+            sapiente quae dolor numquam
+            enim, iusto voluptatum?
+          </p>
+          <label class="next-btn" for="c2">Next</label>
+        </div>
+      </div>
+      <div class="flip" id="p3">
+        <div class="back"><img class="imglivro" src="/assets/images/imagensCongressos/3.png" alt="">
+          <label class="back-btn" for="c3"></label>
+        </div>
+        <div class="front">
+          <h2>pineapple</h2>
+          <p>
+            Lorem ipsum dolor sit amet
+            consectetur adipisicing elit.
+            Soluta impedit eius placeat
+            perspiciatis odit temporibus.
+            A deserunt natus soluta maxime?
+            Reiciendis eaque explicabo
+            sapiente quae dolor numquam
+            enim, iusto voluptatum?
+          </p>
+          <label class="next-btn" for="c3">Next</label>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="menus">
+  <div class="content">
+    <div class="contentleft">
+      <h4>Statistics confirmed that even at worktime <br> you cannot refuse one of our meals...</h4><img class="grafico" src="/assets/images/imagensCongressos/grafico.png" alt="">
+      <div class="relativomenu">
+        <h4>Hard work must be rewarded <br> with excellent food!</h4><a class="botaomenus" href="#">Menus</a>
+      </div>
+    </div><img class="malaprato" src="/assets/images/imagensCongressos/malaprato.png" alt="">
+  </div>
+</section>
+<section class="galeria">
+  <h4>Check our gallery to see more <br> moments captured like this one!</h4><a class="botaogaleria" href="#">Gallery</a>
+</section>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+  let searchBtn = document.querySelector('.searchBtn');
+  let closeBtn = document.querySelector('.closeBtn');
+  let searchBox =document.querySelector('.searchBox');
+  let navigation = document.querySelector('.navigation');
+  let menuToggle = document.querySelector('.menuToggle');
+  let header = document.querySelector('header');
+  searchBtn.onclick = function(){
+  searchBox.classList.add('active');
+  closeBtn.classList.add('active');
+  searchBtn.classList.add('active');
+  menuToggle.classList.add('hide');
+  header.classList.remove('open');
+  }
+  closeBtn.onclick = function(){
+  searchBox.classList.remove('active');
+  closeBtn.classList.remove('active');
+  searchBtn.classList.remove('active');
+  menuToggle.classList.remove('hide');
+  }
+  menuToggle.onclick = function(){
+  header.classList.toggle('open');
+  searchBox.classList.remove('active');
+  closeBtn.classList.remove('active');
+  searchBtn.classList.remove('active');
+  }
+</script>

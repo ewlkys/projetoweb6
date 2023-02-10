@@ -1,0 +1,167 @@
+@font-face{
+  src: url(/fonts/ChamberiHeadline-Black.otf);
+  font-family: chamberi;
+}
+
+@font-face {
+  src: url(/fonts/SegUIVar.ttf);
+  font-family: segoeUi;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #803424;
+}
+
+.container{
+  display: flex;
+  padding: 0 10px;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  position: relative;
+
+}
+
+h1{
+  font-family: chamberi;
+  color: #FFD7CC;
+  font-weight: normal;
+  font-size: 60px;
+  position: relative;
+  padding-top: 50px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+h1::before{
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: #FFD7CC;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+      width: 200px;
+  }
+  50%{
+      width: 400px;
+  }
+  100%{
+      width: 200px;
+  }
+}
+
+.wrapper {
+  padding: 35px;
+  position: relative;
+  overflow-x: hidden;
+  max-width: 1000px;
+  background-color: #803424;
+  border-radius: 13px;
+}
+.wrapper .icon {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 120px;
+  display: flex;
+  align-items: center;
+}
+.icon:first-child {
+  left: 0;
+  display: none;
+  background: linear-gradient(90deg, #803424 70%, transparent);
+}
+.icon:last-child {
+  right: 0;
+  justify-content: flex-end;
+  background: linear-gradient(-90deg, #803424 70%, transparent);
+}
+.icon i {
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+  color: #FFD4C9;
+}
+.icon i:hover {
+  color: #803424;
+    background-color: #FFD4C9;
+}
+.icon:first-child i {
+  margin-left: 15px;
+} 
+.icon:last-child i {
+  margin-right: 15px;
+} 
+.wrapper .tabs-box {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 0 10px;
+}
+.tabs-box.dragging {
+  scroll-behavior: auto;
+  cursor: grab;
+}
+.tabs-box .tab {
+  cursor: pointer;
+  font-size: 1rem;
+  white-space: nowrap;
+  font-family: segoeUi;
+  color: #FFD4C9;
+  padding: 10px 20px;
+  border-radius: 30px;
+}
+.tabs-box .tab:hover{
+  text-decoration: underline;
+  font-weight: 600;
+}
+.tabs-box.dragging .tab {
+  user-select: none;
+  pointer-events: none;
+}
+.tabs-box .tab.active{
+  color: #803424;
+  background: #FFD4C9;
+  font-weight: 800;
+  border-color: transparent;
+}
+
+.image-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 15px 0;
+}
+
+.image-container .image{
+  height:250px;
+  width: 350px;
+  overflow: hidden;
+  border:15px solid #FFD7CC;
+  box-shadow: 0 3px 5px rgba(0,0,0,.3);
+  margin: 20px;
+}
+
+.image-container .image img{
+  height: 100%;
+  width:100%;
+  object-fit: cover;
+}
